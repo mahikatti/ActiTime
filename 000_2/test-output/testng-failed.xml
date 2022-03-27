@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="extentReport.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test thread-count="2" parallel="classes" name="chromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="utilis.Utility">
+      <class name="testPack.VerifyHeaderTabs">
         <methods>
-          <include name="getDataFromExcel"/>
+          <include name="closeBrowser"/>
+          <include name="verifyTimeTrackTab"/>
+          <include name="launchBrowser"/>
+          <include name="createObjectOfPOM"/>
+          <include name="takeScreenshotForFailedTest"/>
+          <include name="logInToApplication"/>
+          <include name="clearObjOFPom"/>
         </methods>
-      </class> <!-- utilis.Utility -->
+      </class> <!-- testPack.VerifyHeaderTabs -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- chromeTest(failed) -->
+  <test thread-count="2" parallel="classes" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testPack.VerifyHeaderTabs">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="verifyTimeTrackTab"/>
+          <include name="launchBrowser"/>
+          <include name="createObjectOfPOM"/>
+          <include name="takeScreenshotForFailedTest"/>
+          <include name="logInToApplication"/>
+          <include name="clearObjOFPom"/>
+        </methods>
+      </class> <!-- testPack.VerifyHeaderTabs -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

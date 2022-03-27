@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -32,7 +33,7 @@ public class VerifyHeaderTabs extends Browser {
 	String TestId;
 	static ExtentTest test;
 	static ExtentHtmlReporter reporter;
-	
+	public static ITestResult result; 
 	@BeforeTest 
 	@Parameters("browser")
 	public void launchBrowser(String browserName) {
@@ -92,17 +93,22 @@ public class VerifyHeaderTabs extends Browser {
 		String url = driver.getCurrentUrl();
 		String title= driver.getTitle();
 		
-		Assert.assertEquals(url,"http://localhost/user/submit_tt.do");
+		Assert.assertEquals(url,"http://localhost/user/submit_tt.");
 		System.out.println("url verified");
 		Assert.assertEquals(title, "actiTIME - Enter Time-Track");
 	}
 	
 	@AfterMethod
-	public void logout() throws IOException {
+	public void takeScreenshotForFailedTest(ITestResult result) throws IOException {
+	if(ITestResult.FAILURE == result.getStatus())
+		{
 		Utility.getScreenshotOfTest(driver, TestId);
-		System.out.println("logout");
-		headerPage.clickOnLogout();
+		}
+	System.out.println("logout");
+	headerPage.clickOnLogout();
+		
 	}
+	
 	
 	@AfterClass
 	public void clearObjOFPom() {
@@ -118,11 +124,9 @@ public class VerifyHeaderTabs extends Browser {
 		driver= null;
 		System.gc();
 	}
+}	
 	
-	
-	
-	
-	}
 
+	
 	
 

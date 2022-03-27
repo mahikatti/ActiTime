@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="extentReport.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test thread-count="2" parallel="classes" name="FirefoxTest(failed)(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testPack.VerifyHeaderTabs">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="logout"/>
+          <include name="launchBrowser"/>
+          <include name="verifyTaskTab"/>
+          <include name="createObjectOfPOM"/>
+          <include name="logInToApplication"/>
+          <include name="clearObjOFPom"/>
+        </methods>
+      </class> <!-- testPack.VerifyHeaderTabs -->
+    </classes>
+  </test> <!-- FirefoxTest(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

@@ -9,18 +9,28 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">chromeTest</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">17,341</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">FirefoxTest</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">27,607</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">44,948</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">chromeTest</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">20,100</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">FirefoxTest</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">27,292</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">47,392</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">chromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testPack.VerifyHeaderTabs</td><td><a href="#m0">verifyTaskTab</a></td><td rowspan="1">1647781834085</td><td rowspan="1">4103</td></tr><tr class="passedeven"><td><a href="#m1">verifyTimeTrackTab</a></td><td rowspan="1">1647781840411</td><td rowspan="1">741</td></tr><tr class="passedodd"><td rowspan="1">testPack.VerifyUserCreated</td><td><a href="#m2">custemerName</a></td><td rowspan="1">1647781837705</td><td rowspan="1">284</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">FirefoxTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testPack.VerifyHeaderTabs</td><td><a href="#m3">verifyTaskTab</a></td><td rowspan="1">1647781857341</td><td rowspan="1">4217</td></tr><tr class="passedeven"><td><a href="#m4">verifyTimeTrackTab</a></td><td rowspan="1">1647781864191</td><td rowspan="1">2621</td></tr><tr class="passedodd"><td rowspan="1">testPack.VerifyUserCreated</td><td><a href="#m5">custemerName</a></td><td rowspan="1">1647781858610</td><td rowspan="1">445</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">chromeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testPack.VerifyHeaderTabs</td><td><a href="#m0">verifyTimeTrackTab</a></td><td rowspan="1">1648395547300</td><td rowspan="1">674</td></tr><tr><th colspan="4">chromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testPack.VerifyHeaderTabs</td><td><a href="#m1">verifyTaskTab</a></td><td rowspan="1">1648395539390</td><td rowspan="1">6653</td></tr><tr class="passedodd"><td rowspan="1">testPack.VerifyUserCreated</td><td><a href="#m2">custemerName</a></td><td rowspan="1">1648395545493</td><td rowspan="1">240</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">FirefoxTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testPack.VerifyHeaderTabs</td><td><a href="#m3">verifyTimeTrackTab</a></td><td rowspan="1">1648395571735</td><td rowspan="1">2503</td></tr><tr><th colspan="4">FirefoxTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testPack.VerifyHeaderTabs</td><td><a href="#m4">verifyTaskTab</a></td><td rowspan="1">1648395565302</td><td rowspan="1">4037</td></tr><tr class="passedodd"><td rowspan="1">testPack.VerifyUserCreated</td><td><a href="#m5">custemerName</a></td><td rowspan="1">1648395566215</td><td rowspan="1">311</td></tr></tbody>
 </table>
-<h2>chromeTest</h2><h3 id="m0">testPack.VerifyHeaderTabs#verifyTaskTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testPack.VerifyHeaderTabs#verifyTimeTrackTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>chromeTest</h2><h3 id="m0">testPack.VerifyHeaderTabs#verifyTimeTrackTab</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [http://localhost/user/submit_tt.] but found [http://localhost/user/submit_tt.do]
+	at testPack.VerifyHeaderTabs.verifyTimeTrackTab(VerifyHeaderTabs.java:96)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testPack.VerifyHeaderTabs#verifyTaskTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">testPack.VerifyUserCreated#custemerName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>FirefoxTest</h2><h3 id="m3">testPack.VerifyHeaderTabs#verifyTaskTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testPack.VerifyHeaderTabs#verifyTimeTrackTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>FirefoxTest</h2><h3 id="m3">testPack.VerifyHeaderTabs#verifyTimeTrackTab</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [http://localhost/user/submit_tt.] but found [http://localhost/user/submit_tt.do]
+	at testPack.VerifyHeaderTabs.verifyTimeTrackTab(VerifyHeaderTabs.java:96)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testPack.VerifyHeaderTabs#verifyTaskTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m5">testPack.VerifyUserCreated#custemerName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

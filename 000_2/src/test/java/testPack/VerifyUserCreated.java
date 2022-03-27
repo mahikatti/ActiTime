@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -38,7 +39,7 @@ public class VerifyUserCreated extends Browser{
 		private HeaderPage headerPage;
 		private SoftAssert soft;
 		String TestId;
-	
+		public static ITestResult result; 
 		static ExtentTest test;
 		static ExtentHtmlReporter reporter;
 		@BeforeTest 
@@ -99,7 +100,11 @@ public class VerifyUserCreated extends Browser{
 			Assert.assertEquals(custName,"Indu");
 		}
 		@AfterMethod
-		public void logout() {
+		public void takeScreenshotForFailedTest(ITestResult result) throws IOException {
+			if(ITestResult.FAILURE == result.getStatus())
+				{
+				Utility.getScreenshotOfTest(driver, TestId);
+				}
 			System.out.println("logout");
 			headerPage.clickOnLogout();
 		}

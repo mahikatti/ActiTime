@@ -7,25 +7,13 @@
   <test thread-count="2" parallel="classes" name="chromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testPack.VerifyUserCreated">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="logout"/>
-          <include name="launchBrowser"/>
-          <include name="logInToApplication"/>
-          <include name="clearObjOFPom"/>
-          <include name="custemerName"/>
-          <include name="createObjectOfPOM"/>
-        </methods>
-      </class> <!-- testPack.VerifyUserCreated -->
       <class name="testPack.VerifyHeaderTabs">
         <methods>
           <include name="closeBrowser"/>
-          <include name="logout"/>
           <include name="verifyTimeTrackTab"/>
           <include name="launchBrowser"/>
-          <include name="verifyTaskTab"/>
           <include name="createObjectOfPOM"/>
+          <include name="takeScreenshotForFailedTest"/>
           <include name="logInToApplication"/>
           <include name="clearObjOFPom"/>
         </methods>
@@ -35,25 +23,13 @@
   <test thread-count="2" parallel="classes" name="FirefoxTest(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="testPack.VerifyUserCreated">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="logout"/>
-          <include name="launchBrowser"/>
-          <include name="logInToApplication"/>
-          <include name="clearObjOFPom"/>
-          <include name="custemerName"/>
-          <include name="createObjectOfPOM"/>
-        </methods>
-      </class> <!-- testPack.VerifyUserCreated -->
       <class name="testPack.VerifyHeaderTabs">
         <methods>
           <include name="closeBrowser"/>
-          <include name="logout"/>
           <include name="verifyTimeTrackTab"/>
           <include name="launchBrowser"/>
-          <include name="verifyTaskTab"/>
           <include name="createObjectOfPOM"/>
+          <include name="takeScreenshotForFailedTest"/>
           <include name="logInToApplication"/>
           <include name="clearObjOFPom"/>
         </methods>

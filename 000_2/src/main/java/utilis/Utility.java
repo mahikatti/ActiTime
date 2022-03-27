@@ -12,9 +12,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
-import org.testng.annotations.Test;
 
 public class Utility {
+	
 	
 	public static void getScreenshotOfTest(WebDriver driver, String TestId) throws IOException
 	{
@@ -41,6 +41,8 @@ public class Utility {
 		return data;
 		
 	}
+	
+	
 	
 	//@Test
 	public static void getDataFromExcel() throws EncryptedDocumentException, IOException {
